@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: hello-app
-          image: ghcr.io/cheating-at-solitaire/pipeline-lab:72b3f75f19a8ce909df48508530b6f58e326a8ce
+          image: ghcr.io/cheating-at-solitaire/pipeline-lab:5404d784e25016edddd41bff5d4ce9be9f69ab93
           imagePullPolicy: IfNotPresent
 
           ports:
