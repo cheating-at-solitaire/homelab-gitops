@@ -19,7 +19,15 @@ spec:
     spec:
       containers:
         - name: hello-app
-          image: nginx:1.27-alpine
+          image: ghcr.io/cheating-at-solitaire/pipeline-lab:72b3f75f19a8ce909df48508530b6f58e326a8ce
+          imagePullPolicy: IfNotPresent
 
           ports:
-            - containerPort: 80
+            - containerPort: 3000
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 3
+            periodSeconds: 5
